@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Navbar Styles */
+.navbar-custom {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  padding: 15px 0;
+}
+
+.navbar-brand-custom {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-link-custom {
+  color: #fff !important;
+  font-weight: 500;
+  margin: 0 10px;
+  padding: 8px 15px !important;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+/* Card Styles */
+.card-custom {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* Button Styles */
+.btn-gradient {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  color: white;
+}
+
+.btn-success-gradient {
+  background: linear-gradient(45deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-danger-gradient {
+  background: linear-gradient(45deg, #eb3349 0%, #f45c43 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Form Styles */
+.form-control-custom {
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.form-control-custom:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Dashboard Cards */
+.stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+}
+
+.stat-card-green {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card-green:hover {
+  transform: scale(1.05);
+}
+
+.stat-card-orange {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card-orange:hover {
+  transform: scale(1.05);
+}
+
+/* Account Card */
+.account-card {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.account-card:hover {
+  transform: translateY(-5px);
+}
+
+.account-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Transaction Styles */
+.transaction-deposit {
+  color: #11998e;
+  font-weight: bold;
+}
+
+.transaction-withdrawal {
+  color: #eb3349;
+  font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Profile Avatar */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Table Styles */
+.table-custom {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.table-custom thead {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+}
+
+/* Badge Styles */
+.badge-custom {
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+}
